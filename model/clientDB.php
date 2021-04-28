@@ -30,3 +30,4 @@ function delete($id)
 
     return $db->exec($sql);
 }
+

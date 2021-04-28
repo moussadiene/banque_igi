@@ -13,6 +13,7 @@ extract($_POST);
 
 if (isset($envoyer)) {
 
+
     $ok = addClient($nom, $prenom, $adresse, $genre, $tel, $email);
 
     header("Location: ../view/client.php?add=$ok");

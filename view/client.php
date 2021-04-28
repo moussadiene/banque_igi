@@ -39,12 +39,12 @@
             </marquee>
         </div>
         <div class="mb-2">
-          
+
             <?php if (isset($_GET['add'])) : ?>
                 <span class="alert alert-success"> Donnée Ajouter</span>
             <?php endif ?>
 
-              <?php if (isset($_GET['delete'])) : ?>
+            <?php if (isset($_GET['delete'])) : ?>
                 <span class="alert alert-info"> Donnée Supprimer</span>
             <?php endif ?>
         </div>
@@ -76,19 +76,18 @@
                     <th>Action</th>
                 </thead>
                 <tbody>
-                     <? foreach($clients as $cli) { ?>
-                            <tr>
-                                <td> <?php echo $cli['id']?></td>
-                                <td> <?php echo $cli['prenom']?></td>
-                                <td> <?php echo $cli['nom']?></td>
-                                <td> <?php echo $cli['genre']?></td>
-                                <td> <?php echo $cli['adresse']?></td>
-                                <td> <?php echo $cli['tel']?></td>
-                                <td> <?php echo $cli['email']?></td>
-                                <td><button class="btn btn-info">edit</button>
-                                <a class="btn btn-danger" href="../controller/clientController.php?id=<?php echo $cli['id']?>">delete</a>
-                            </tr>
-                            <?php }?>
+                    <? foreach ($clients as $cli) { ?>
+                        <tr>
+                            <td> <?php echo $cli['prenom'] ?></td>
+                            <td> <?php echo $cli['nom'] ?></td>
+                            <td> <?php echo $cli['genre'] ?></td>
+                            <td> <?php echo $cli['adresse'] ?></td>
+                            <td> <?php echo $cli['tel'] ?></td>
+                            <td> <?php echo $cli['email'] ?></td>
+                            <td><button class="btn btn-info">edit</button>
+                                <a class="btn btn-danger" href="../controller/clientController.php?id=<?php echo $cli['id'] ?>">delete</a>
+                        </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>
